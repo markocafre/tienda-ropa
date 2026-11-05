@@ -51,3 +51,43 @@ main {
 .estado.disponible { background-color: #b7f0c1; }
 .estado.reservado  { background-color: #ffe9a8; }
 .estado.agotado    { background-color: #f5b5b5; }
+
+.tarjeta img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.btn-consultar {
+  display: block;
+  margin-top: 12px;
+  background-color: #25d366;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filtros button {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.filtros button.activo {
+  background-color: #1e1e2f;
+  color: white;
+  border-color: #1e1e2f;
+}
