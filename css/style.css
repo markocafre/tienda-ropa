@@ -1,3 +1,4 @@
+/* ---------- Base ---------- */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -18,57 +19,36 @@ main {
   padding: 20px;
 }
 
-.catalogo {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-.tarjeta {
-  flex: 1 1 250px;
-  background-color: white;
-  border-radius: 8px;
-  padding: 15px;
-}
-
-.tarjeta h3 {
-  margin-top: 0;
-}
-
-.precio {
-  font-weight: bold;
-  font-size: 18px;
-}
-
-.estado {
-  display: inline-block;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 14px;
-  color: #222;
-}
-
-.estado.disponible { background-color: #b7f0c1; }
-.estado.reservado  { background-color: #ffe9a8; }
-.estado.agotado    { background-color: #f5b5b5; }
-
-.tarjeta img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 10px;
-}
-
-.btn-consultar {
-  display: block;
-  margin-top: 12px;
-  background-color: #25d366;
-  color: white;
+footer {
   text-align: center;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 6px;
+  padding: 30px 20px;
+  color: #666;
+}
+
+footer a {
+  color: #1e1e2f;
+  font-weight: bold;
+}
+
+/* ---------- Controles (buscador, selects, filtros) ---------- */
+#buscador {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+#filtro-talle,
+#orden {
+  padding: 10px 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
 }
 
 .filtros {
@@ -90,4 +70,97 @@ main {
   background-color: #1e1e2f;
   color: white;
   border-color: #1e1e2f;
+}
+
+#contador {
+  color: #666;
+  margin: 0 0 15px;
+}
+
+/* ---------- Catálogo y tarjetas ---------- */
+.catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.tarjeta {
+  flex: 1 1 250px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta h3 {
+  margin-top: 0;
+}
+
+.tarjeta img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.tarjeta.agotado img {
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+
+.precio {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* ---------- Talles ---------- */
+.talles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.talle {
+  border: 1px solid #222;
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 14px;
+}
+
+.talle.sin-stock {
+  color: #999;
+  border-color: #ccc;
+  text-decoration: line-through;
+}
+
+/* ---------- Estados ---------- */
+.estado {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  color: #222;
+}
+
+.estado.disponible { background-color: #b7f0c1; }
+.estado.reservado  { background-color: #ffe9a8; }
+.estado.agotado    { background-color: #f5b5b5; }
+
+/* ---------- Botón de WhatsApp ---------- */
+.btn-consultar {
+  display: block;
+  margin-top: 12px;
+  background-color: #25d366;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
 }

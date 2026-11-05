@@ -13,14 +13,34 @@
 </header>
 
 <main>
+    <input type="search" id="buscador" placeholder="Buscar prenda...">
+
+    <select id="filtro-talle">
+        <option value="todos">Todos los talles</option>
+    </select>
+
+    <select id="orden">
+        <option value="ninguno">Ordenar por...</option>
+        <option value="menor">Menor precio</option>
+        <option value="mayor">Mayor precio</option>
+    </select>
+
     <div class="filtros">
         <button class="activo" data-estado="todos">Todos</button>
         <button data-estado="disponible">Disponibles</button>
         <button data-estado="reservado">Reservados</button>
         <button data-estado="agotado">Agotados</button>
     </div>
+
+    <p id="contador"></p>
+
     <div id="catalogo" class="catalogo"></div>
 </main>
+
+<footer>
+    <p>Seguinos en <a href="https://instagram.com/USUARIO_DE_TU_AMIGO" target="_blank" rel="noopener">Instagram</a></p>
+    <p>Compra y retiro presencial en el local.</p>
+</footer>
 
 <script src="js/productos.js"></script>
 <script src="js/app.js"></script>
