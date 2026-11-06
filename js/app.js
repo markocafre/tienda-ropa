@@ -1,3 +1,5 @@
+let productos = cargarProductos();
+
 const NUMERO_WHATSAPP = "5491100000000"; // reemplazá por el número real
 
 function calcularEstado(producto) {

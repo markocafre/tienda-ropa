@@ -1,10 +1,12 @@
-const productos = [
+const productosIniciales = [
+
   {
     id: 1,
     nombre: "Remera oversize negra",
     descripcion: "Algodón, corte holgado.",
     precio: 18000,
     imagen: "img/remera-negra.jpg",
+    drop: "Drop noviembre",
     variantes: [
       { talle: "M", stock: 1, reservadas: 0 },
       { talle: "L", stock: 2, reservadas: 1 },
@@ -16,6 +18,7 @@ const productos = [
     descripcion: "Frisa liviana.",
     precio: 35000,
     imagen: "img/buzo-gris.jpg",
+    drop: "Drop noviembre",
     variantes: [
       { talle: "L", stock: 1, reservadas: 1 },
     ],
@@ -26,6 +29,7 @@ const productos = [
     descripcion: "Tiro alto, lavado clásico.",
     precio: 42000,
     imagen: "img/jean-azul.jpg",
+    drop: "Drop noviembre",
     variantes: [
       { talle: "38", stock: 0, reservadas: 0 },
       { talle: "40", stock: 0, reservadas: 0 },
